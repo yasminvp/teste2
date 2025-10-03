@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>yasmin velho — UGC premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'BurguesScript';
+      src: url('https://raw.githubusercontent.com/yasminvp/teste2/main/Burgues%20Script%20Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Aileron';
+      src: url('https://raw.githubusercontent.com/yasminvp/teste2/3bc562ffd9c8c967bff77e8f2a6ac746984e5cd2/Aileron-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'SloopScript';
+      src: url('https://raw.githubusercontent.com/yasminvp/teste2/c784ebc72ffae3b41b06bfa94dc4dc4ddaef5bd1/sloop-script.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'BodoniFLF';
+      src: url('https://raw.githubusercontent.com/yasminvp/teste2/7a8686764e41d13722808b6ae75cb9dc329055e8/BodoniFLF-Roman.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    body {
+      box-sizing: border-box;
+    }
+    
+    :root{
+      --bg:#F8F7F2;
+      --fg:#2C2C2C;
+      --muted:#6B6B6B;
+      --card:#FFFFFF;
+      --border:#E0D5C7;
+      --gold:#B8860B;
+      --gold-2:#CD853F;
+      --black:#000000;
+      --white:#ffffff;
+      --radius:16px;
+      --maxw:1080px;
+      --ls:0px;
+      --heading:"Poppins", sans-serif;
+      --body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;font-weight:400;font-size:22px}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none;transition:all 0.2s ease}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:0 24px}
+    .section{padding:80px 0}
+    h1,h2,h3{letter-spacing:var(--ls);font-weight:600}
+    h1,h2{font-family:var(--heading)}
+    .btn{display:inline-block;padding:18px 36px;border:1px solid var(--border);border-radius:8px;transition:all 0.2s ease;cursor:pointer;font-weight:500;font-size:20px}
+    .btn:hover{border-color:var(--gold);background:rgba(139,21,56,0.05);transform:translateY(-1px)}
+    .btn-primary{background:var(--gold);border:1px solid var(--gold);color:#ffffff;font-weight:600}
+    .btn-primary:hover{background:#6B1129;border-color:#6B1129;transform:translateY(-1px);box-shadow:0 4px 12px rgba(139,21,56,0.25)}
+    .chip{display:inline-block;padding:6px 12px;border:1px solid var(--border);border-radius:6px;color:var(--muted);font-size:13px;font-weight:500}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all 0.2s ease;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+    .card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+    .grid{display:grid;gap:32px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:900px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+    @media (max-width:600px){nav{display:none!important}}
+    
+    /* Responsividade aprimorada */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .section { padding: 40px 0; }
+      .hero-title { font-size: 48px !important; }
+      .hero-subtitle { font-size: 24px !important; }
+      .title { font-size: 36px !important; }
+      .subtitle { font-size: 20px !important; }
+      .grid { gap: 24px; }
+      .card { padding: 24px; }
+      .btn { padding: 14px 24px; font-size: 16px; }
+      .text-large { font-size: 18px; }
+      
+      /* Header responsivo */
+      header .wrap { padding: 12px 16px; }
+      header div[style*="font-size: 84px"] { font-size: 48px !important; }
+      header div[style*="font-size: 24px"] { font-size: 16px !important; margin-top: -20px !important; }
+      
+      /* Seções especiais mobile */
+      .philosophy-card { padding: 32px 20px !important; }
+      .pilar-card { padding: 32px 20px !important; }
+      
+      /* Formulário mobile */
+      .contact-form { padding: 0; }
+      .form-group input, .form-group textarea, .form-group select { 
+        padding: 14px; 
+        font-size: 16px; 
+      }
+    }
+    
+    @media (max-width: 480px) {
+      body { font-size: 18px; }
+      .hero-title { font-size: 36px !important; }
+      .hero-subtitle { font-size: 20px !important; }
+      .title { font-size: 28px !important; }
+      .subtitle { font-size: 18px !important; }
+      .section { padding: 32px 0; }
+      .card { padding: 20px; }
+      .btn { padding: 12px 20px; font-size: 14px; }
+      
+      /* Header extra pequeno */
+      header div[style*="font-size: 84px"] { font-size: 36px !important; }
+      header div[style*="font-size: 24px"] { font-size: 14px !important; }
+      
+      /* Ajustes específicos mobile */
+      .philosophy-card { padding: 24px 16px !important; }
+      .pilar-card { padding: 24px 16px !important; }
+      .service-price { font-size: 24px !important; }
+      .service-features li { font-size: 16px !important; }
+    }
+    
+    header{position:relative;background:#333333;}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+    header nav a:hover{color:var(--gold)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    .brand h1{margin:0;font-size:20px;letter-spacing:var(--ls);font-weight:600}
+    footer{border-top:1px solid rgba(224,213,199,.7);padding:24px 0;color:var(--muted)}
+    
+    /* Títulos de seção */
+    .title{font-size:64px;margin:0 0 24px;font-family:var(--heading);text-align:center;font-weight:600;letter-spacing:-1px;color:var(--gold)}
+    .subtitle{color:var(--muted);text-align:center;font-size:28px;margin:0 0 48px;font-weight:400;line-height:1.6}
+    
+    /* Hero */
+    .hero-content{text-align:center;margin-top:48px}
+    .hero-title{font-family:var(--heading);font-size:76px;margin:0 0 24px;color:var(--fg);font-weight:700;letter-spacing:-1px}
+    .hero-subtitle{color:var(--muted);font-size:32px;margin:0;font-weight:400}
+    
+    /* Metodologia */
+    .step{text-align:center;padding:24px 16px}
+    .step-number{width:40px;height:40px;border-radius:50%;background:var(--gold);color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;margin:0 auto 16px}
+    .step h3{margin:0 0 12px;color:var(--fg);font-size:16px;font-weight:600}
+    
+    /* Pilares */
+    .pilar{text-align:center;padding:48px 32px}
+    .pilar-icon{font-size:48px;margin-bottom:24px}
+    .pilar h3{margin:0 0 16px;color:var(--fg);font-size:28px;font-weight:600}
+    
+    /* Galeria */
+    .photo{aspect-ratio:1;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;transition:all 0.2s ease}
+    .photo:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+    .photo-placeholder{display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:32px;background:var(--card)}
+    
+    /* Vídeos */
+    .video-item{aspect-ratio:9/16;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;transition:all 0.2s ease}
+    .video-item:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+    .video-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--muted);background:var(--card)}
+    .play-button{width:48px;height:48px;border-radius:50%;background:rgba(198,166,103,0.1);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:18px;color:var(--gold)}
+    
+    /* Serviços */
+    .service-price{color:var(--gold);font-size:32px;font-weight:700;margin:16px 0}
+    .service-features{list-style:none;padding:0;margin:24px 0}
+    .service-features li{padding:12px 0;border-bottom:1px solid var(--border);font-size:18px}
+    .service-features li:before{content:"✓";color:var(--gold);margin-right:12px;font-weight:600}
+    .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#ffffff;padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600}
+    
+    /* Contato */
+    .contact-form{max-width:600px;margin:0 auto}
+    .form-group{margin-bottom:24px}
+    .form-group label{display:block;margin-bottom:8px;color:var(--fg);font-weight:500;font-size:18px}
+    .form-group input, .form-group textarea, .form-group select{width:100%;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--fg);font-family:inherit;font-size:18px;transition:all 0.2s ease}
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,166,103,0.1)}
+    
+    /* Animações minimalistas */
+    .fade-in{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    
+    /* Efeitos sutis */
+    .interactive-hover {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .interactive-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    /* Seções com fundo sutil */
+    .section-alt {
+      background: rgba(42,42,42,0.5);
+    }
+    
+    /* Espaçamentos elegantes */
+    .section-spacer {
+      padding: 60px 0;
+    }
+    
+    /* Typography refinada */
+    .text-large {
+      font-size: 24px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    
+    .text-small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    
+    /* Pilares interativos refinados */
+    .pilar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 20px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    
+    .pilar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-color: var(--gold);
+    }
+    
+    .pilar-card.active {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(198,166,103,0.15);
+      border-color: var(--gold);
+      background: linear-gradient(135deg, rgba(198,166,103,0.02), var(--card));
+    }
+    
+    .pilar-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+    
+    .pilar-details.active {
+      max-height: 200px;
+      opacity: 1;
+    }
+    
+    /* Indicadores minimalistas */
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .indicator.active {
+      background: var(--gold);
+      transform: scale(1.2);
+    }
+    
+    /* Animações do globo e ponte */
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    
+    @keyframes cableWave {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-2px); }
+    }
+    
+    @keyframes cableWave2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(2px); }
+    }
+    
+    @keyframes cableWave3 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-1px); }
+    }
+    
+    @keyframes divineGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 4px var(--gold-2)) drop-shadow(0 0 8px var(--gold)) drop-shadow(0 0 12px rgba(184,134,11,0.3));
+        opacity: 0.8;
+      }
+      50% { 
+        filter: drop-shadow(0 0 8px var(--gold-2)) drop-shadow(0 0 16px var(--gold)) drop-shadow(0 0 24px rgba(184,134,11,0.5));
+        opacity: 1;
+      }
+    }
+    
+    @keyframes divinePulse {
+      0%, 100% { 
+        box-shadow: 0 8px 25px rgba(184,134,11,0.5), 0 0 20px rgba(205,133,63,0.3);
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 12px 35px rgba(184,134,11,0.8), 0 0 40px rgba(205,133,63,0.6);
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes fillLine {
+      0% { 
+        width: 0%; 
+        box-shadow: 0 0 8px rgba(169,27,71,0.6);
+      }
+      50% { 
+        width: 50%; 
+        box-shadow: 0 0 16px rgba(169,27,71,0.8);
+      }
+      100% { 
+        width: 100%; 
+        box-shadow: 0 0 20px rgba(169,27,71,1);
+      }
+    }
+    
+    @keyframes sparkleMove {
+      0% { 
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% { 
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% { 
+        opacity: 0.8;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes progressFlow {
+      0% { 
+        width: 0%; 
+      }
+      25% { 
+        width: 33%; 
+      }
+      50% { 
+        width: 66%; 
+      }
+      75% { 
+        width: 100%; 
+      }
+      100% { 
+        width: 100%; 
+      }
+    }
+    
+    @keyframes progressPulse {
+      0%, 100% { 
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% { 
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes markerPulse {
+      0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(139,21,56,0.4);
+      }
+      50% { 
+        transform: scale(1.1);
+        box-shadow: 0 0 16px rgba(139,21,56,0.8);
+      }
+    }
+    
+    @keyframes centerMarkerPulse {
+      0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 16px rgba(169,27,71,0.4);
+      }
+      50% { 
+        transform: translateX(-50%) scale(1.15);
+        box-shadow: 0 0 24px rgba(169,27,71,0.8);
+      }
+    }
+    
+    @keyframes lightningGlow {
+      0% { 
+        filter: drop-shadow(0 0 4px var(--gold)) drop-shadow(0 0 8px var(--gold));
+        stroke-width: 3;
+      }
+      100% { 
+        filter: drop-shadow(0 0 8px var(--gold)) drop-shadow(0 0 16px var(--gold)) drop-shadow(0 0 24px rgba(184,134,11,0.6));
+        stroke-width: 4;
+      }
+    }
+    
+    @keyframes sparkleGlow {
+      0% { 
+        opacity: 0.3;
+        stroke-width: 1;
+      }
+      100% { 
+        opacity: 0.8;
+        stroke-width: 2;
+      }
+    }
+    
+    @keyframes energyPulse {
+      0%, 100% { 
+        transform: scale(1);
+        filter: drop-shadow(0 0 4px currentColor);
+      }
+      50% { 
+        transform: scale(1.3);
+        filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor);
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div style="text-align: center; padding: 20px 0;">
+    <div style="font-size: 84px; letter-spacing: -1px; color: #ffffff; line-height: 1.4; margin: 0; text-align: center; word-spacing: 4px;">
+      <span style="font-family: 'BurguesScript', cursive;">Y</span><span style="font-family: 'SloopScript', cursive;">asmin</span> <span style="font-family: 'BurguesScript', cursive;">V</span><span style="font-family: 'SloopScript', cursive;">elho</span>
+    </div>
+    <div style="font-family: 'BodoniFLF', serif; font-size: 24px; color: #ffffff; margin-top: -50px; letter-spacing: 2px; font-weight: normal;">
+      UGC PREMIUM
+    </div>
+  </div>
+</header>
+
+  <!-- VÍDEO COM TÍTULO ELEGANTE -->
+  <section id="main-video" class="section hero" style="padding-top:20px; background:#333333;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <p style="color: #ffffff; font-size: 20px; margin: 0; font-weight: 400;">Assista esta breve aula, para entender como meu método é perfeito para você.</p>
+      </div>
+      <div style="position: relative;">
+        <video
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          style="width:100%; border-radius:16px; background:#000; object-fit:cover;"
+        >
+          <source src="https://raw.githubusercontent.com/mediaelement/mediaelement-files/master/big_buck_bunny.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo em MP4.
+        </video>
+        <button 
+          id="muteButton" 
+          onclick="toggleMute()"
+          style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.9); border: 1px solid rgba(224,224,224,0.8); border-radius: 50%; width: 50px; height: 50px; color: #333; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+          onmouseover="this.style.background='rgba(212,175,55,0.1)'; this.style.borderColor='var(--gold)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.borderColor='rgba(224,224,224,0.8)'"
+        >
+          🔇
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOU EU -->
+  <section id="sobre" class="section" style="background: #E6E4E1; padding-top: 10px; padding-bottom: 20px;">
+    <div class="container">
+
+
+      <!-- Layout: Texto à esquerda, foto à direita -->
+      <div class="grid grid-2" style="align-items: flex-start; gap: 60px; max-width: 1200px; margin: 0 auto;">
+        <!-- Coluna da esquerda: Texto -->
+        <div class="fade-in" style="text-align: left;">
+          <h2 style="font-size: 72px; margin: 40px 0 -20px; font-weight: 400; color: #8B1538; font-family: 'SloopScript', cursive;">Prazer, me conheça:</h2>
+          <p class="text-large" style="margin-bottom: 32px; font-size: 18px; line-height: 1.7; margin-top: -10px;">Muito prazer, me chamo Yasmin. Tenho 22 anos e 3 anos de experiência em marketing digital. Hoje, trabalho criando campanhas de UGC Premium pelo meu método exclusivo, que une posicionamento e branding, mergulhando no universo da marca para transformar percepção em autoridade.</p>
+          <p style="margin-bottom: 48px; color: var(--fg); font-size: 26px; font-weight: 600; font-family: 'Aileron', sans-serif; letter-spacing: 2px;">Não entrego apenas conteúdo. <strong style="color: #8B1538; font-family: 'Aileron', sans-serif;">Entrego posicionamento.</strong></p>
+          
+          <div style="text-align: left; margin-bottom: 48px;">
+            <button class="btn btn-primary" style="padding: 18px 36px; font-size: 18px;">Vamos Conversar.</button>
+            
+            <!-- Linha dourada que se preenche automaticamente -->
+            <div style="margin-top: 40px; position: relative; width: 100%; max-width: 400px;">
+              <div style="height: 4px; background: rgba(212,175,55,0.2); border-radius: 2px; overflow: hidden; position: relative;">
+                <div style="height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-2), var(--gold)); border-radius: 2px; width: 0%; animation: fillLine 8s ease-in-out infinite; position: relative; box-shadow: 0 0 8px rgba(255,215,0,0.6);">
+                  <!-- Partículas brilhantes na linha -->
+                  <div style="position: absolute; top: -2px; right: -4px; width: 8px; height: 8px; background: var(--gold-2); border-radius: 50%; animation: sparkleMove 8s ease-in-out infinite; box-shadow: 0 0 6px var(--gold-2);"></div>
+                </div>
+              </div>
+              <p style="text-align: left; margin-top: 16px; color: var(--gold); font-size: 14px; font-weight: 500;">Conectando você ao sucesso.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita: Foto -->
+        <div class="fade-in" style="display: flex; justify-content: center; align-items: flex-end;">
+          <div style="width: 400px; height: 500px; background: var(--card); border-radius: 16px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 48px; margin-top: 80px;">
+            <img src="https://raw.githubusercontent.com/yasminvp/teste2/main/IMG_3528.JPG" alt="Yasmin Velho" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display: none; flex-direction: column; align-items: center; gap: 16px;">
+              <div style="font-size: 48px;">📸</div>
+              <p style="margin: 0; font-size: 16px;">Yasmin Velho</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção de Habilidades -->
+      <div style="margin-top: 80px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+        
+        <!-- Título centralizado das skills -->
+        <div style="text-align: center; margin-bottom: 60px;">
+          <h3 style="font-size: 36px; margin: 0 0 16px; font-weight: 600; color: var(--gold);">Minhas Especialidades</h3>
+          <div style="width: 100px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto;"></div>
+        </div>
+        
+        <!-- Layout com duas colunas e raio no meio -->
+        <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 60px; align-items: start; position: relative;">
+          
+          <!-- Coluna Esquerda: Soft Skills -->
+          <div>
+            <div style="text-align: center; margin-bottom: 32px;">
+              <h4 style="font-size: 24px; margin: 0 0 8px; font-weight: 600; color: var(--gold);">Soft Skills</h4>
+              <div style="width: 60px; height: 1px; background: var(--gold); margin: 0 auto; opacity: 0.6;"></div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              
+              <!-- Pensamento Estratégico -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'soft')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(184,134,11,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(184,134,11,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">🧠</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Pensamento Estratégico</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Visão analítica para identificar oportunidades únicas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Criatividade -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'soft')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(184,134,11,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(184,134,11,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">💡</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Criatividade</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Soluções inovadoras e narrativas autênticas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Foco em Resultados -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'soft')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(184,134,11,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(184,134,11,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">🎯</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Foco em Resultados</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Orientação para entrega e performance.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comunicação -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'soft')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(184,134,11,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(184,134,11,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">🤝</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Comunicação</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Conexão autêntica com audiências.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Linha Divisória Simples -->
+          <div style="display: flex; flex-direction: column; align-items: center; height: 100%; position: relative;">
+            <!-- Linha vertical fina -->
+            <div style="width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, var(--gold), var(--gold), transparent); opacity: 0.6;"></div>
+          </div>
+          
+          <!-- Coluna Direita: Hard Skills -->
+          <div>
+            <div style="text-align: center; margin-bottom: 32px;">
+              <h4 style="font-size: 24px; margin: 0 0 8px; font-weight: 600; color: var(--gold-2);">Hard Skills</h4>
+              <div style="width: 60px; height: 1px; background: var(--gold-2); margin: 0 auto; opacity: 0.6;"></div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              
+              <!-- Marketing Digital -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold-2); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'hard')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(205,133,63,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(205,133,63,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(205,133,63,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">📊</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Marketing Digital</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">3 anos de experiência em campanhas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Produção UGC -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold-2); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'hard')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(205,133,63,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(205,133,63,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(205,133,63,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">🎬</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Produção UGC</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Criação e direção de conteúdo autêntico.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Branding -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold-2); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'hard')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(205,133,63,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(205,133,63,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(205,133,63,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">🎨</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Branding</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Desenvolvimento de identidade visual.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Análise de Dados -->
+              <div class="skill-card" style="padding: 20px; background: #000000; border-radius: 12px; border: 1px solid var(--gold-2); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseenter="activateSkill(this, 'hard')" onmouseleave="deactivateSkill(this)">
+                <div class="skill-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(205,133,63,0.1) 0%, transparent 70%); opacity: 0; transition: all 0.4s ease; pointer-events: none;"></div>
+                <div style="display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;">
+                  <div class="skill-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, rgba(205,133,63,0.2), rgba(255,215,0,0.1)); border: 1px solid rgba(205,133,63,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.4s ease;">📈</div>
+                  <div style="flex: 1;">
+                    <h5 style="margin: 0 0 6px; font-weight: 600; color: #ffffff; font-size: 15px; transition: all 0.4s ease;">Análise de Dados</h5>
+                    <p style="margin: 0; color: #cccccc; font-size: 13px; line-height: 1.4; transition: all 0.4s ease;">Métricas e otimização de performance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsividade para mobile -->
+      <style>
+        @media (max-width: 768px) {
+          /* Skills responsivas */
+          #sobre > div:last-child > div:nth-child(2) > div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+          
+          /* Esconder raio no mobile */
+          #sobre > div:last-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+            display: none !important;
+          }
+          
+          /* Ajustar colunas no mobile */
+          #sobre > div:last-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(1),
+          #sobre > div:last-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+            width: 100% !important;
+          }
+          
+          #sobre .grid.grid-2 {
+            grid-template-columns: 1fr !important;
+            gap: 48px !important;
+            text-align: center !important;
+          }
+          #sobre .fade-in:first-child {
+            text-align: center !important;
+          }
+          #sobre .fade-in:first-child > div:nth-child(3) {
+            text-align: center !important;
+          }
+          #sobre .fade-in:first-child > div:nth-child(3) > div:nth-child(2) > p {
+            text-align: center !important;
+          }
+        }
+      </style>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA -->
+  <section id="metodologia" class="section" style="padding-top: 20px;">
+    <div class="container">
+      <!-- GLOBO GIRANDO COM PONTOS BRANCOS -->
+      <div style="display: flex; justify-content: center; margin: 0 0 32px; position: relative; width: 100%; height: 300px; align-items: center;">
+        <!-- Estrelas ao redor do globo -->
+        <div style="position: absolute; top: 10%; left: 15%; width: 3px; height: 3px; background: var(--gold); border-radius: 50%; animation: twinkle 3.2s ease-in-out infinite; box-shadow: 0 0 12px var(--gold), 0 0 24px var(--gold), 0 0 36px rgba(184,134,11,0.5);"></div>
+        <div style="position: absolute; top: 20%; left: 25%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 2.8s ease-in-out infinite; box-shadow: 0 0 16px #ffffff, 0 0 32px #ffffff, 0 0 48px rgba(255,255,255,0.6);"></div>
+        <div style="position: absolute; top: 15%; right: 20%; width: 3px; height: 3px; background: var(--gold-2); border-radius: 50%; animation: twinkle 2.3s ease-in-out infinite; box-shadow: 0 0 15px var(--gold-2), 0 0 30px var(--gold-2), 0 0 45px rgba(205,133,63,0.7);"></div>
+        <div style="position: absolute; top: 30%; right: 15%; width: 5px; height: 5px; background: #ffffff; border-radius: 50%; animation: twinkle 1.9s ease-in-out infinite; box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 60px rgba(255,255,255,0.8);"></div>
+        <div style="position: absolute; top: 40%; left: 10%; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; animation: twinkle 2.6s ease-in-out infinite; box-shadow: 0 0 14px var(--gold), 0 0 28px var(--gold), 0 0 42px rgba(139,21,56,0.6);"></div>
+        <div style="position: absolute; top: 50%; left: 8%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 3.1s ease-in-out infinite; box-shadow: 0 0 18px #ffffff, 0 0 36px #ffffff, 0 0 54px rgba(255,255,255,0.7);"></div>
+        <div style="position: absolute; top: 60%; left: 12%; width: 4px; height: 4px; background: var(--gold-2); border-radius: 50%; animation: twinkle 1.7s ease-in-out infinite; box-shadow: 0 0 16px var(--gold-2), 0 0 32px var(--gold-2), 0 0 48px rgba(255,215,0,0.8);"></div>
+        <div style="position: absolute; top: 70%; left: 20%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 2.4s ease-in-out infinite; box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 45px rgba(255,255,255,0.6);"></div>
+        <div style="position: absolute; bottom: 15%; left: 25%; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; animation: twinkle 2.9s ease-in-out infinite; box-shadow: 0 0 20px var(--gold), 0 0 40px var(--gold), 0 0 60px rgba(212,175,55,0.7);"></div>
+        <div style="position: absolute; bottom: 10%; left: 35%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 1.8s ease-in-out infinite; box-shadow: 0 0 14px #ffffff, 0 0 28px #ffffff, 0 0 42px rgba(255,255,255,0.5);"></div>
+        
+        <!-- Estrelas do lado direito -->
+        <div style="position: absolute; top: 45%; right: 8%; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; animation: twinkle 2.7s ease-in-out infinite; box-shadow: 0 0 16px var(--gold), 0 0 32px var(--gold), 0 0 48px rgba(212,175,55,0.6);"></div>
+        <div style="position: absolute; top: 55%; right: 12%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 3.3s ease-in-out infinite; box-shadow: 0 0 18px #ffffff, 0 0 36px #ffffff, 0 0 54px rgba(255,255,255,0.7);"></div>
+        <div style="position: absolute; top: 65%; right: 18%; width: 5px; height: 5px; background: var(--gold-2); border-radius: 50%; animation: twinkle 1.6s ease-in-out infinite; box-shadow: 0 0 22px var(--gold-2), 0 0 44px var(--gold-2), 0 0 66px rgba(255,215,0,0.8);"></div>
+        <div style="position: absolute; bottom: 20%; right: 15%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 2.5s ease-in-out infinite; box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 60px rgba(255,255,255,0.6);"></div>
+        <div style="position: absolute; bottom: 10%; right: 25%; width: 3px; height: 3px; background: var(--gold); border-radius: 50%; animation: twinkle 2.1s ease-in-out infinite; box-shadow: 0 0 15px var(--gold), 0 0 30px var(--gold), 0 0 45px rgba(212,175,55,0.5);"></div>
+        <div style="position: absolute; bottom: 15%; right: 35%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 1.4s ease-in-out infinite; box-shadow: 0 0 18px #ffffff, 0 0 36px #ffffff, 0 0 54px rgba(255,255,255,0.7);"></div>
+        
+        <!-- Estrelas na parte superior -->
+        <div style="position: absolute; top: 5%; left: 40%; width: 3px; height: 3px; background: var(--gold-2); border-radius: 50%; animation: twinkle 2.8s ease-in-out infinite; box-shadow: 0 0 16px var(--gold-2), 0 0 32px var(--gold-2), 0 0 48px rgba(255,215,0,0.7);"></div>
+        <div style="position: absolute; top: 8%; left: 50%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 1.9s ease-in-out infinite; box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 60px rgba(255,255,255,0.8);"></div>
+        <div style="position: absolute; top: 5%; right: 40%; width: 3px; height: 3px; background: var(--gold); border-radius: 50%; animation: twinkle 2.6s ease-in-out infinite; box-shadow: 0 0 14px var(--gold), 0 0 28px var(--gold), 0 0 42px rgba(212,175,55,0.6);"></div>
+        <div style="position: absolute; top: 12%; left: 60%; width: 5px; height: 5px; background: #ffffff; border-radius: 50%; animation: twinkle 3.4s ease-in-out infinite; box-shadow: 0 0 24px #ffffff, 0 0 48px #ffffff, 0 0 72px rgba(255,255,255,0.9);"></div>
+        <div style="position: absolute; top: 18%; right: 60%; width: 3px; height: 3px; background: var(--gold-2); border-radius: 50%; animation: twinkle 1.5s ease-in-out infinite; box-shadow: 0 0 18px var(--gold-2), 0 0 36px var(--gold-2), 0 0 54px rgba(255,215,0,0.8);"></div>
+        
+        <!-- Estrelas na parte inferior -->
+        <div style="position: absolute; bottom: 5%; left: 45%; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; animation: twinkle 2.3s ease-in-out infinite; box-shadow: 0 0 16px var(--gold), 0 0 32px var(--gold), 0 0 48px rgba(212,175,55,0.7);"></div>
+        <div style="position: absolute; bottom: 8%; right: 45%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 3.1s ease-in-out infinite; box-shadow: 0 0 18px #ffffff, 0 0 36px #ffffff, 0 0 54px rgba(255,255,255,0.6);"></div>
+        <div style="position: absolute; bottom: 12%; left: 55%; width: 5px; height: 5px; background: var(--gold-2); border-radius: 50%; animation: twinkle 1.8s ease-in-out infinite; box-shadow: 0 0 22px var(--gold-2), 0 0 44px var(--gold-2), 0 0 66px rgba(255,215,0,0.9);"></div>
+        <div style="position: absolute; bottom: 5%; right: 55%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 2.7s ease-in-out infinite; box-shadow: 0 0 16px #ffffff, 0 0 32px #ffffff, 0 0 48px rgba(255,255,255,0.7);"></div>
+        
+        <!-- Globo central -->
+        <div style="width: 180px; height: 180px; background: #000; border-radius: 50%; position: relative; overflow: hidden; animation: rotate 25s linear infinite; box-shadow: 0 12px 35px rgba(0,0,0,0.3); z-index: 2;">
+          <!-- Pontos brancos dentro do globo -->
+          <div style="position: absolute; top: 25%; left: 20%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 2s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 45%; right: 25%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 2.5s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 35%; left: 30%; width: 5px; height: 5px; background: #ffffff; border-radius: 50%; animation: twinkle 1.8s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 65%; right: 35%; width: 2px; height: 2px; background: #ffffff; border-radius: 50%; animation: twinkle 3s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 25%; right: 20%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 2.2s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 35%; left: 45%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 2.8s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 55%; left: 15%; width: 2px; height: 2px; background: #ffffff; border-radius: 50%; animation: twinkle 1.5s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 45%; right: 45%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 2.7s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 15%; right: 40%; width: 3px; height: 3px; background: #ffffff; border-radius: 50%; animation: twinkle 1.9s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 15%; left: 40%; width: 2px; height: 2px; background: #ffffff; border-radius: 50%; animation: twinkle 2.4s ease-in-out infinite;"></div>
+        </div>
+        
+        <!-- Estrelas próximas ao globo -->
+        <div style="position: absolute; top: 40%; left: 35%; width: 4px; height: 4px; background: #ffffff; border-radius: 50%; animation: twinkle 1.6s ease-in-out infinite; box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 60px rgba(255,255,255,0.8);"></div>
+        <div style="position: absolute; top: 35%; right: 35%; width: 3px; height: 3px; background: var(--gold); border-radius: 50%; animation: twinkle 2.1s ease-in-out infinite; box-shadow: 0 0 16px var(--gold), 0 0 32px var(--gold), 0 0 48px rgba(212,175,55,0.7);"></div>
+        <div style="position: absolute; bottom: 35%; left: 35%; width: 5px; height: 5px; background: #ffffff; border-radius: 50%; animation: twinkle 2.6s ease-in-out infinite; box-shadow: 0 0 24px #ffffff, 0 0 48px #ffffff, 0 0 72px rgba(255,255,255,0.9);"></div>
+        <div style="position: absolute; bottom: 40%; right: 35%; width: 4px; height: 4px; background: var(--gold-2); border-radius: 50%; animation: twinkle 1.7s ease-in-out infinite; box-shadow: 0 0 18px var(--gold-2), 0 0 36px var(--gold-2), 0 0 54px rgba(255,215,0,0.8);"></div>
+      </div>
+      
+      <h2 class="title fade-in" style="color: var(--gold);">Universo de Marca.</h2>
+      <p class="subtitle fade-in">Os princípios que guiam cada projeto e transformam marcas em experiências únicas.</p>
+      
+
+
+      <!-- BARRA DE PROGRESSO ESTRATÉGICA -->
+      <div style="max-width: 900px; margin: 0 auto 64px; position: relative; padding: 60px 40px;">
+        
+        <!-- Barra de progresso principal -->
+        <div style="position: relative; height: 8px; background: rgba(184,134,11,0.3); border-radius: 4px; margin: 40px 0; overflow: hidden; box-shadow: 0 0 8px rgba(184,134,11,0.2);">
+          <!-- Progresso animado -->
+          <div style="height: 100%; background: linear-gradient(90deg, #B8860B, #CD853F, #B8860B, #DAA520); border-radius: 4px; width: 0%; animation: progressFlow 12s ease-in-out infinite; box-shadow: 0 0 20px rgba(184,134,11,0.8), 0 0 40px rgba(184,134,11,0.6), 0 0 60px rgba(184,134,11,0.4); position: relative;">
+            <!-- Partícula brilhante na ponta -->
+            <div style="position: absolute; top: -4px; right: -6px; width: 16px; height: 16px; background: radial-gradient(circle, #B8860B, #DAA520); border-radius: 50%; animation: progressPulse 1.5s ease-in-out infinite; box-shadow: 0 0 16px #B8860B, 0 0 32px rgba(184,134,11,0.8);"></div>
+          </div>
+          
+          <!-- Marcos na barra -->
+          <div style="position: absolute; top: -8px; left: 16.67%; width: 24px; height: 24px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 12px; font-weight: 600; animation: markerPulse 3s ease-in-out infinite;">1</div>
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold-2), var(--gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 14px; font-weight: 700; animation: centerMarkerPulse 2s ease-in-out infinite; box-shadow: 0 0 16px rgba(255,215,0,0.4);">✨</div>
+          <div style="position: absolute; top: -8px; right: 16.67%; width: 24px; height: 24px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 12px; font-weight: 600; animation: markerPulse 3.5s ease-in-out infinite;">3</div>
+        </div>
+        
+        <!-- Labels dos marcos -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; position: relative; margin-top: 24px;">
+          <!-- Cliente -->
+          <div style="text-align: center; flex: 1; transform: translateX(-10%);">
+            <div style="margin-bottom: 12px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+              <h4 style="margin: 0; color: var(--gold); font-size: 16px; font-weight: 600;">CLIENTE</h4>
+            </div>
+            <div style="font-size: 14px; color: var(--muted); line-height: 1.4;">
+              <div style="margin-bottom: 6px; font-weight: 500;">Necessidade.</div>
+              <div>Busca solução.</div>
+            </div>
+          </div>
+
+          <!-- EU -->
+          <div style="text-align: center; flex: 1;">
+            <div style="margin-bottom: 12px;">
+              <div style="font-size: 28px; margin-bottom: 8px;">✨</div>
+              <h4 style="margin: 0; color: var(--gold-2); font-size: 18px; font-weight: 700; text-shadow: 0 0 8px rgba(255,215,0,0.3);">EU</h4>
+            </div>
+            <div style="font-size: 14px; color: var(--muted); line-height: 1.4;">
+              <div style="margin-bottom: 6px; font-weight: 500;">Transformação.</div>
+              <div>UGC + Estratégia.</div>
+            </div>
+          </div>
+
+          <!-- Sua Marca -->
+          <div style="text-align: center; flex: 1; transform: translateX(10%);">
+            <div style="margin-bottom: 12px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">👑</div>
+              <h4 style="margin: 0; color: var(--gold); font-size: 16px; font-weight: 600;">SUA MARCA</h4>
+            </div>
+            <div style="font-size: 14px; color: var(--muted); line-height: 1.4;">
+              <div style="margin-bottom: 6px; font-weight: 500;">Dominância.</div>
+              <div>Única opção.</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Indicador de progresso textual -->
+        <div style="text-align: center; margin-top: 32px; padding: 16px; background: rgba(212,175,55,0.05); border-radius: 8px; border: 1px solid rgba(212,175,55,0.1);">
+          <p style="margin: 0; font-size: 14px; color: var(--gold); font-weight: 500;">
+            <span id="progressText" style="transition: opacity 0.3s ease;">Iniciando jornada de transformação...</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- TEXTO PERSUASIVO -->
+      <div style="max-width: 800px; margin: 0 auto 64px; text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(212,175,55,0.05), rgba(255,215,0,0.05)); border-radius: 16px; border: 1px solid rgba(212,175,55,0.2);">
+        <h3 style="color: var(--gold); font-size: 36px; margin: 0 0 24px; font-weight: 600;">O Método que Domina Mercados.</h3>
+        <p style="font-size: 24px; line-height: 1.7; margin-bottom: 24px; color: var(--fg);">Não criamos apenas conteúdo. <strong>Criamos monopólios mentais.</strong></p>
+        <p style="font-size: 20px; line-height: 1.6; margin-bottom: 20px; color: var(--muted);">Meu método conecta UGC autêntico com posicionamento estratégico cirúrgico, criando uma ponte emocional tão forte entre seus clientes e sua marca que a concorrência simplesmente <em>deixa de existir</em> na mente do consumidor.</p>
+        <p style="font-size: 20px; line-height: 1.6; margin-bottom: 20px; color: var(--muted);">Quando seus clientes pensam na solução que você oferece, eles não comparam preços, não pesquisam alternativas. <strong>Eles simplesmente escolhem você.</strong></p>
+        <p style="font-size: 22px; line-height: 1.7; margin: 0; color: var(--gold); font-weight: 600;">Porque você não é mais uma opção no mercado. Você É o mercado.</p>
+      </div>
+
+      <!-- Seção Sofisticada com Fundo Cinza Escuro -->
+      <div style="background: #2a2a2a; border-radius: 24px; padding: 80px 40px; margin: 0 auto; max-width: 1000px; position: relative; overflow: hidden; border: 2px solid var(--gold);">
+        
+        <!-- Partículas de fundo -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+          <div style="position: absolute; top: 20%; left: 10%; width: 2px; height: 2px; background: var(--gold); border-radius: 50%; animation: twinkle 3s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 30%; right: 15%; width: 3px; height: 3px; background: var(--gold-2); border-radius: 50%; animation: twinkle 2.5s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 25%; left: 20%; width: 2px; height: 2px; background: var(--gold); border-radius: 50%; animation: twinkle 4s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 40%; right: 25%; width: 3px; height: 3px; background: var(--gold-2); border-radius: 50%; animation: twinkle 3.5s ease-in-out infinite;"></div>
+          <div style="position: absolute; top: 60%; left: 50%; width: 2px; height: 2px; background: var(--gold); border-radius: 50%; animation: twinkle 2.8s ease-in-out infinite;"></div>
+        </div>
+
+        <!-- Grid dos Princípios -->
+        <div class="grid grid-3" style="gap: 48px; position: relative; z-index: 2;">
+          
+          <!-- Singularidade -->
+          <div class="philosophy-card" id="philosophy-1" onmouseenter="activatePhilosophy(1)" onmouseleave="deactivatePhilosophy(1)" style="background: #3a3a3a; border: 2px solid var(--gold); border-radius: 20px; padding: 48px 32px; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(139,21,56,0.1);">
+            
+            <!-- Ícone Interativo -->
+            <div class="philosophy-icon" style="margin-bottom: 32px; display: flex; justify-content: center; position: relative;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--gold), var(--gold-2)); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; position: relative;">
+                <div style="font-size: 32px; transition: all 0.4s ease;">💎</div>
+                
+                <!-- Círculos de energia -->
+                <div class="energy-ring" style="position: absolute; width: 100px; height: 100px; border: 1px solid var(--gold); border-radius: 50%; animation: rotate 20s linear infinite; opacity: 0; transition: opacity 0.4s ease;"></div>
+                <div class="energy-ring" style="position: absolute; width: 120px; height: 120px; border: 1px solid var(--gold-2); border-radius: 50%; animation: rotate 15s linear infinite reverse; opacity: 0; transition: opacity 0.4s ease;"></div>
+              </div>
+            </div>
+            
+            <h3 style="color: #ffffff; margin: 0 0 20px; font-size: 24px; font-weight: 600; transition: all 0.4s ease;">Singularidade</h3>
+            <p style="color: #cccccc; margin: 0; font-size: 16px; line-height: 1.6; font-weight: 400; transition: all 0.4s ease;">Acreditar na própria identidade e expressá-la em cada detalhe, tornando cada marca única e inconfundível.</p>
+            
+            <!-- Detalhes expandidos -->
+            <div class="philosophy-details" style="max-height: 0; overflow: hidden; transition: all 0.4s ease; opacity: 0; margin-top: 0;">
+              <div style="padding-top: 24px; border-top: 1px solid var(--gold); margin-top: 24px;">
+                <p style="color: #aaaaaa; font-size: 14px; margin: 0; line-height: 1.5;">Cada marca possui uma essência única. Meu trabalho é descobrir e amplificar essa singularidade através de UGC autêntico.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sofisticação -->
+          <div class="philosophy-card" id="philosophy-2" onmouseenter="activatePhilosophy(2)" onmouseleave="deactivatePhilosophy(2)" style="background: #3a3a3a; border: 2px solid var(--gold); border-radius: 20px; padding: 48px 32px; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(139,21,56,0.1);">
+            
+            <!-- Ícone Interativo -->
+            <div class="philosophy-icon" style="margin-bottom: 32px; display: flex; justify-content: center; position: relative;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--gold), var(--gold-2)); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; position: relative;">
+                <div style="font-size: 32px; transition: all 0.4s ease;">✨</div>
+                
+                <!-- Círculos de energia -->
+                <div class="energy-ring" style="position: absolute; width: 100px; height: 100px; border: 1px solid var(--gold); border-radius: 50%; animation: rotate 20s linear infinite; opacity: 0; transition: opacity 0.4s ease;"></div>
+                <div class="energy-ring" style="position: absolute; width: 120px; height: 120px; border: 1px solid var(--gold-2); border-radius: 50%; animation: rotate 15s linear infinite reverse; opacity: 0; transition: opacity 0.4s ease;"></div>
+              </div>
+            </div>
+            
+            <h3 style="color: var(--gold); margin: 0 0 20px; font-size: 24px; font-weight: 600; transition: all 0.4s ease;">Sofisticação</h3>
+            <p style="color: #cccccc; margin: 0; font-size: 16px; line-height: 1.6; font-weight: 400; transition: all 0.4s ease;">Criamos um ecossistema visual e narrativo único que ressoa profundamente com seu público-alvo.</p>
+            
+            <!-- Detalhes expandidos -->
+            <div class="philosophy-details" style="max-height: 0; overflow: hidden; transition: all 0.4s ease; opacity: 0; margin-top: 0;">
+              <div style="padding-top: 24px; border-top: 1px solid var(--gold); margin-top: 24px;">
+                <p style="color: #aaaaaa; font-size: 14px; margin: 0; line-height: 1.5;">Cada marca possui um universo único. Desenvolvemos identidade visual consistente e linguagem que cria conexão emocional instantânea.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Renovação -->
+          <div class="philosophy-card" id="philosophy-3" onmouseenter="activatePhilosophy(3)" onmouseleave="deactivatePhilosophy(3)" style="background: #3a3a3a; border: 2px solid var(--gold); border-radius: 20px; padding: 48px 32px; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(139,21,56,0.1);">
+            
+            <!-- Ícone Interativo -->
+            <div class="philosophy-icon" style="margin-bottom: 32px; display: flex; justify-content: center; position: relative;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--gold), var(--gold-2)); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; position: relative;">
+                <div style="font-size: 32px; transition: all 0.4s ease;">🔥</div>
+                
+                <!-- Círculos de energia -->
+                <div class="energy-ring" style="position: absolute; width: 100px; height: 100px; border: 1px solid var(--gold); border-radius: 50%; animation: rotate 20s linear infinite; opacity: 0; transition: opacity 0.4s ease;"></div>
+                <div class="energy-ring" style="position: absolute; width: 120px; height: 120px; border: 1px solid var(--gold-2); border-radius: 50%; animation: rotate 15s linear infinite reverse; opacity: 0; transition: opacity 0.4s ease;"></div>
+              </div>
+            </div>
+            
+            <h3 style="color: #ffffff; margin: 0 0 20px; font-size: 24px; font-weight: 600; transition: all 0.4s ease;">Renovação</h3>
+            <p style="color: #cccccc; margin: 0; font-size: 16px; line-height: 1.6; font-weight: 400; transition: all 0.4s ease;">Ousadia estratégica que cria narrativas transformadoras, elevando marcas a novos patamares de relevância.</p>
+            
+            <!-- Detalhes expandidos -->
+            <div class="philosophy-details" style="max-height: 0; overflow: hidden; transition: all 0.4s ease; opacity: 0; margin-top: 0;">
+              <div style="padding-top: 24px; border-top: 1px solid var(--gold); margin-top: 24px;">
+                <p style="color: #aaaaaa; font-size: 14px; margin: 0; line-height: 1.5;">Renovação constante mantém marcas relevantes. Cada projeto é uma oportunidade de reinvenção estratégica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha de conexão dourada -->
+        <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.8;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTUDOS DE CASO -->
+  <section id="exemplos" class="section">
+    <div class="container">
+      <h2 class="title fade-in">Estudos de Caso.</h2>
+      <p class="subtitle fade-in">Análises profundas de marcas, posicionamento e estratégias UGC que dominam seus mercados.</p>
+      
+      <div class="grid grid-3">
+        <!-- Estudo de Caso 1 -->
+        <div class="card fade-in interactive-hover" style="padding: 0; overflow: hidden;">
+          <div style="position: relative;">
+            <!-- PLACEHOLDER PARA SEU VÍDEO 1 -->
+            <video
+              id="caseStudyVideo1"
+              controls
+              preload="metadata"
+              style="width: 100%; height: 250px; object-fit: cover; background: #000;"
+              poster=""
+            >
+              <!-- SUBSTITUA A SRC ABAIXO PELO SEU VÍDEO -->
+              <source src="SEU_VIDEO_ESTUDO_CASO_1.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo.
+            </video>
+            
+            <!-- Fallback quando não há vídeo -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 250px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.1)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold);">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+              <p style="margin: 0; font-weight: 600; font-size: 16px;">Estudo de Caso #1</p>
+              <p style="margin: 8px 0 0; font-size: 14px; opacity: 0.8;">Vídeo em breve</p>
+            </div>
+          </div>
+          
+          <div style="padding: 24px;">
+            <h3 style="margin: 0 0 12px; color: var(--fg); font-size: 18px; font-weight: 600;">Marca Premium.</h3>
+            <p style="color: var(--muted); margin: 0 0 16px; font-size: 14px; line-height: 1.5;">Análise completa de posicionamento, universo visual e estratégia UGC que transformou uma marca comum em referência absoluta.</p>
+            
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="chip">Posicionamento</span>
+              <span class="chip">UGC Strategy</span>
+              <span class="chip">Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estudo de Caso 2 -->
+        <div class="card fade-in interactive-hover" style="padding: 0; overflow: hidden;">
+          <div style="position: relative;">
+            <!-- PLACEHOLDER PARA SEU VÍDEO 2 -->
+            <video
+              id="caseStudyVideo2"
+              controls
+              preload="metadata"
+              style="width: 100%; height: 250px; object-fit: cover; background: #000;"
+              poster=""
+            >
+              <!-- SUBSTITUA A SRC ABAIXO PELO SEU VÍDEO -->
+              <source src="SEU_VIDEO_ESTUDO_CASO_2.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo.
+            </video>
+            
+            <!-- Fallback quando não há vídeo -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 250px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.1)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold);">
+              <div style="font-size: 48px; margin-bottom: 16px;">🚀</div>
+              <p style="margin: 0; font-weight: 600; font-size: 16px;">Estudo de Caso #2</p>
+              <p style="margin: 8px 0 0; font-size: 14px; opacity: 0.8;">Vídeo em breve</p>
+            </div>
+          </div>
+          
+          <div style="padding: 24px;">
+            <h3 style="margin: 0 0 12px; color: var(--gold); font-size: 18px; font-weight: 600;">Startup Disruptiva</h3>
+            <p style="color: var(--muted); margin: 0 0 16px; font-size: 14px; line-height: 1.5;">Como uma startup usou UGC autêntico para criar conexão emocional e dominar um nicho competitivo em 6 meses.</p>
+            
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="chip">Growth</span>
+              <span class="chip">Autenticidade</span>
+              <span class="chip">Nicho</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estudo de Caso 3 -->
+        <div class="card fade-in interactive-hover" style="padding: 0; overflow: hidden;">
+          <div style="position: relative;">
+            <!-- PLACEHOLDER PARA SEU VÍDEO 3 -->
+            <video
+              id="caseStudyVideo3"
+              controls
+              preload="metadata"
+              style="width: 100%; height: 250px; object-fit: cover; background: #000;"
+              poster=""
+            >
+              <!-- SUBSTITUA A SRC ABAIXO PELO SEU VÍDEO -->
+              <source src="SEU_VIDEO_ESTUDO_CASO_3.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo.
+            </video>
+            
+            <!-- Fallback quando não há vídeo -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 250px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.1)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold);">
+              <div style="font-size: 48px; margin-bottom: 16px;">👑</div>
+              <p style="margin: 0; font-weight: 600; font-size: 16px;">Estudo de Caso #3</p>
+              <p style="margin: 8px 0 0; font-size: 14px; opacity: 0.8;">Vídeo em breve</p>
+            </div>
+          </div>
+          
+          <div style="padding: 24px;">
+            <h3 style="margin: 0 0 12px; color: var(--gold); font-size: 18px; font-weight: 600;">Reposicionamento</h3>
+            <p style="color: var(--muted); margin: 0 0 16px; font-size: 14px; line-height: 1.5;">Transformação radical: como reposicionar uma marca estabelecida e criar novo universo UGC que multiplica resultados.</p>
+            
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="chip">Rebranding</span>
+              <span class="chip">Transformação</span>
+              <span class="chip">ROI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div style="text-align: center; margin-top: 48px;">
+        <p style="color: var(--muted); margin-bottom: 24px; font-size: 16px;">Quer que sua marca seja o próximo estudo de caso de sucesso?</p>
+        <button class="btn btn-primary" style="padding: 16px 32px; font-size: 16px;" onclick="document.querySelector('#pilares').scrollIntoView({behavior:'smooth'})">Vamos Criar Seu Case</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OS 3 PILARES DO MEU MÉTODO -->
+  <section id="pilares" class="section section-alt">
+    <div class="container">
+      <h2 class="title fade-in">Os 3 Pilares do Meu Método</h2>
+      <p class="subtitle fade-in">A metodologia que transforma marcas em referências absolutas</p>
+      
+      <div class="grid grid-3" style="margin-bottom: 48px;">
+        <!-- Pilar 1: Posicionamento -->
+        <div class="pilar-card fade-in" id="pilar-1" onclick="activatePilar(1)">
+          <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px;">1</div>
+          
+          <div style="font-size: 32px; margin: 24px 0;">🎯</div>
+          <h3 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: var(--fg);">Posicionamento</h3>
+          <p style="color: var(--muted); margin: 0 0 24px;">Definimos exatamente onde sua marca se posiciona no mercado e como se diferencia da concorrência.</p>
+          
+          <div class="pilar-details">
+            <div style="padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px;">
+              <p style="font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6;">Identificamos seu diferencial único e criamos uma proposta de valor irresistível que posiciona sua marca como a única opção lógica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 2: Universo de Marca -->
+        <div class="pilar-card fade-in" id="pilar-2" onclick="activatePilar(2)">
+          <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px;">2</div>
+          
+          <div style="font-size: 32px; margin: 24px 0;">🌟</div>
+          <h3 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: var(--fg);">Universo de Marca</h3>
+          <p style="color: var(--muted); margin: 0 0 24px;">Criamos um universo visual e narrativo único que ressoa profundamente com seu público-alvo.</p>
+          
+          <div class="pilar-details">
+            <div style="padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px;">
+              <p style="font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6;">Desenvolvemos uma identidade visual consistente e uma linguagem única que cria conexão emocional e reconhecimento instantâneo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 3: Execução UGC -->
+        <div class="pilar-card fade-in" id="pilar-3" onclick="activatePilar(3)">
+          <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px;">3</div>
+          
+          <div style="font-size: 32px; margin: 24px 0;">🎬</div>
+          <h3 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: var(--fg);">Execução UGC</h3>
+          <p style="color: var(--muted); margin: 0 0 24px;">Transformamos estratégia em conteúdo autêntico que gera engajamento e conversões reais.</p>
+          
+          <div class="pilar-details">
+            <div style="padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px;">
+              <p style="font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6;">Criamos conteúdos UGC autênticos e estratégicos que convertem seguidores em clientes fiéis e embaixadores da marca.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div style="display: flex; justify-content: center; gap: 12px;">
+        <div class="indicator" id="indicator-1" onclick="activatePilar(1)"></div>
+        <div class="indicator" id="indicator-2" onclick="activatePilar(2)"></div>
+        <div class="indicator" id="indicator-3" onclick="activatePilar(3)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title fade-in">Galeria UGC</h2>
+      <p class="subtitle fade-in">Conteúdos autênticos que conectam marcas aos seus clientes</p>
+      
+      <div class="grid grid-3">
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">📸</div>
+        </div>
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">💄</div>
+        </div>
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">👗</div>
+        </div>
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">☕</div>
+        </div>
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">🌸</div>
+        </div>
+        <div class="photo fade-in interactive-hover">
+          <div class="photo-placeholder">✨</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E SE VOCÊ PUDESSE TER TUDO ISSO EM UM SÓ LUGAR -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title fade-in" style="color: var(--gold);">E Se Você Pudesse Ter Tudo Isso em Um Só Lugar?</h2>
+      <p class="subtitle fade-in">Não é apenas UGC. É uma transformação completa do seu posicionamento no mercado.</p>
+      
+      <!-- Seção Premium Minimalista -->
+      <div style="background: #2a2a2a; border-radius: 32px; padding: 100px 60px; margin: 0 auto; max-width: 1200px; position: relative; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.4); border: 2px solid var(--gold);">
+        
+        <!-- Gradiente sutil de fundo -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.03) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(255,215,0,0.02) 0%, transparent 50%); pointer-events: none;"></div>
+
+        <!-- Título elegante -->
+        <div style="text-align: center; margin-bottom: 80px; position: relative; z-index: 2;">
+          <h3 style="color: #ffffff; font-size: 48px; margin: 0 0 24px; font-weight: 300; letter-spacing: -1px; font-family: var(--heading);">Imagine ter acesso a</h3>
+          <div style="width: 120px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto;"></div>
+        </div>
+        
+        <!-- Lista de benefícios minimalista -->
+        <div style="max-width: 800px; margin: 0 auto 80px; position: relative; z-index: 2;">
+          
+          <!-- Benefício 1 -->
+          <div style="display: flex; align-items: flex-start; gap: 32px; margin-bottom: 48px; padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; cursor: pointer;" onmouseenter="this.style.backgroundColor='rgba(212,175,55,0.02)'; this.style.transform='translateX(8px)'" onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)'">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.05)); border: 1px solid rgba(212,175,55,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-size: 24px;">🎯</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 16px; color: #B8860B; font-weight: 500; font-size: 22px; letter-spacing: -0.5px;">Análise Completa de Posicionamento</h4>
+              <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; font-weight: 300;">Descubro exatamente onde sua marca deve se posicionar para se tornar a única opção lógica no mercado</p>
+            </div>
+          </div>
+          
+          <!-- Benefício 2 -->
+          <div style="display: flex; align-items: flex-start; gap: 32px; margin-bottom: 48px; padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; cursor: pointer;" onmouseenter="this.style.backgroundColor='rgba(212,175,55,0.02)'; this.style.transform='translateX(8px)'" onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)'">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.05)); border: 1px solid rgba(212,175,55,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-size: 24px;">🔍</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 16px; color: #B8860B; font-weight: 500; font-size: 22px; letter-spacing: -0.5px;">Mapeamento de Gaps do Mercado</h4>
+              <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; font-weight: 300;">Identifico as oportunidades invisíveis que seus concorrentes estão perdendo e você pode dominar</p>
+            </div>
+          </div>
+          
+          <!-- Benefício 3 -->
+          <div style="display: flex; align-items: flex-start; gap: 32px; margin-bottom: 48px; padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; cursor: pointer;" onmouseenter="this.style.backgroundColor='rgba(212,175,55,0.02)'; this.style.transform='translateX(8px)'" onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)'">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.05)); border: 1px solid rgba(212,175,55,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-size: 24px;">🎬</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 16px; color: #B8860B; font-weight: 500; font-size: 22px; letter-spacing: -0.5px;">Estratégia UGC Personalizada</h4>
+              <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; font-weight: 300;">Crio conteúdo autêntico que conecta emocionalmente e converte com precisão cirúrgica</p>
+            </div>
+          </div>
+          
+          <!-- Benefício 4 -->
+          <div style="display: flex; align-items: flex-start; gap: 32px; padding: 32px 0; transition: all 0.3s ease; cursor: pointer;" onmouseenter="this.style.backgroundColor='rgba(212,175,55,0.02)'; this.style.transform='translateX(8px)'" onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)'">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.05)); border: 1px solid rgba(212,175,55,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-size: 24px;">✨</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 16px; color: #FFD700; font-weight: 500; font-size: 22px; letter-spacing: -0.5px;">Minha Presença Autêntica</h4>
+              <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; font-weight: 300;">Posso entregar briefings detalhados para você gravar, ou <strong style="color: var(--gold);">EU MESMA gravo o UGC</strong> - trazendo minha autenticidade e credibilidade para sua marca</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Resultado final elegante -->
+        <div style="text-align: center; padding: 60px 40px; background: rgba(255,255,255,0.02); border-radius: 24px; border: 1px solid rgba(212,175,55,0.1); margin-bottom: 60px; position: relative; z-index: 2;">
+          <div style="font-size: 40px; margin-bottom: 24px; opacity: 0.8;">👑</div>
+          <h4 style="margin: 0 0 20px; color: #ffffff; font-weight: 300; font-size: 28px; letter-spacing: -0.5px;">O Resultado</h4>
+          <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 20px; line-height: 1.6; font-weight: 300;">Sua marca não compete mais.<br><span style="color: var(--gold); font-weight: 500;">Ela domina.</span></p>
+        </div>
+        
+        <!-- Botão minimalista -->
+        <div style="text-align: center; position: relative; z-index: 2;">
+          <button class="btn btn-primary" style="padding: 20px 48px; font-size: 16px; font-weight: 500; background: linear-gradient(135deg, #B8860B, #CD853F, #B8860B); border: 2px solid #B8860B; color: #ffffff; border-radius: 50px; transition: all 0.3s ease; letter-spacing: 0.5px; box-shadow: 0 0 20px rgba(184,134,11,0.6), 0 0 40px rgba(184,134,11,0.4), 0 0 60px rgba(184,134,11,0.2); text-shadow: 0 1px 2px rgba(0,0,0,0.3);" onclick="document.querySelector('#contato').scrollIntoView({behavior:'smooth'})" onmouseenter="this.style.background='linear-gradient(135deg, #CD853F, #B8860B, #CD853F)'; this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 0 30px rgba(184,134,11,0.8), 0 0 60px rgba(184,134,11,0.6), 0 0 90px rgba(184,134,11,0.4)'" onmouseleave="this.style.background='linear-gradient(135deg, #B8860B, #CD853F, #B8860B)'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(184,134,11,0.6), 0 0 40px rgba(184,134,11,0.4), 0 0 60px rgba(184,134,11,0.2)'">Quero Dominar Meu Mercado</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section id="servicos" class="section section-alt">
+    <div class="container">
+      <h2 class="title fade-in" style="color: var(--gold);">Investimento</h2>
+      <p class="subtitle fade-in">Escolha como quer transformar sua marca em referência absoluta</p>
+      
+      <div class="grid grid-3">
+        <div class="card fade-in interactive-hover">
+          <h3 style="color: var(--fg); margin-top: 0;">Campanha – Direção Criativa UGC Premium</h3>
+          <div class="service-price">R$ 850,00</div>
+          <ul class="service-features">
+            <li>Análise completa de posicionamento</li>
+            <li>Mapeamento de gaps de mercado</li>
+            <li>5 briefings de vídeos personalizados</li>
+            <li>2 roteiros UGC Premium (sem gravação)</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%; margin-top: 24px;">Escolher Plano</button>
+        </div>
+        
+        <div class="card fade-in interactive-hover" style="border-color: var(--gold); position: relative;" onmouseenter="showObservacoes(this)" onmouseleave="hideObservacoes(this)" ontouchstart="showObservacoes(this)" ontouchend="hideObservacoes(this)">
+          <div class="popular-badge" style="top: -24px;">A MELHOR OPÇÃO</div>
+          <h3 style="color: var(--fg); margin-top: 0;">Campanha - UGC Premium</h3>
+          <div class="service-price">R$ 1.300,00</div>
+          
+          <div style="margin: 24px 0; padding: 16px; background: rgba(212,175,55,0.05); border-radius: 8px;">
+            <h4 style="margin: 0 0 16px; color: var(--gold); font-size: 16px; font-weight: 600;">Incluso no investimento:</h4>
+            <ul class="service-features" style="margin: 0;">
+              <li>Análise de posicionamento da marca</li>
+              <li>Identificação de gap de mercado (oportunidades e diferenciais)</li>
+              <li>2 vídeos UGC Premium criados dentro do universo da marca</li>
+              <li>Direção criativa e roteiros estratégicos alinhados ao posicionamento</li>
+              <li>Estética aspiracional e narrativa visual que fortalecem percepção de valor</li>
+            </ul>
+          </div>
+          
+          <div class="observacoes-hover" style="margin: 24px 0; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(212,175,55,0.1); max-height: 0; overflow: hidden; opacity: 0; transition: all 0.3s ease;">
+            <h4 style="margin: 0 0 12px; color: var(--muted); font-size: 14px; font-weight: 600;">Observações importantes:</h4>
+            <ul style="margin: 0; padding-left: 16px; color: var(--muted); font-size: 13px; line-height: 1.5;">
+              <li>A campanha contempla 2 vídeos UGC Premium.</li>
+              <li>A produção é pensada dentro do universo da marca, com narrativa estratégica.</li>
+              <li>Taxas de cenário ou acessórios (quando necessários) são cobradas à parte, conforme o briefing da campanha.</li>
+            </ul>
+          </div>
+          
+          <button class="btn btn-primary" style="width: 100%; margin-top: 24px;">Escolher Plano</button>
+        </div>
+        
+        <div class="card fade-in interactive-hover">
+          <h3 style="color: var(--fg); margin-top: 0;">Projeto Personalizado</h3>
+          <div class="service-price">Sob Consulta</div>
+          <ul class="service-features">
+            <li>Solução 100% customizada</li>
+            <li>Análise aprofundada do seu caso</li>
+            <li>Estratégia exclusiva para seus objetivos</li>
+            <li>Acompanhamento personalizado</li>
+            <li>Resultados sob medida</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%; margin-top: 24px;">Vamos Conversar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="container">
+      <h2 class="title fade-in" style="color: var(--gold);">Vamos Trabalhar Juntos?</h2>
+      <p class="subtitle fade-in">Entre em contato e vamos criar algo incrível para sua marca</p>
+      
+      <form id="contatoForm" class="contact-form fade-in" action="https://formspree.io/f/mdkwawov" method="POST" accept-charset="UTF-8" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="servicos">Serviços</label>
+          <select id="servicos" name="servicos" required>
+            <option value="">Selecione um serviço</option>
+            <option value="estrategia">Estratégia + Briefings</option>
+            <option value="completo">Completo com Minha Presença</option>
+            <option value="personalizado">Projeto Personalizado</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+        </div>
+
+        <div class="form-group" style="grid-column:1 / -1">
+          <label for="mensagem">Me conte sobre sua ideia</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua marca, objetivos e como posso ajudar..." required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="Nova mensagem do site - UGC Premium">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;">
+
+        <button id="btnEnviar" type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 16px;">
+          Enviar Mensagem
+        </button>
+
+        <div id="formOk"   style="grid-column:1 / -1;margin-top:12px;font-size:14px;color:#065f46;display:none;">Mensagem enviada com sucesso! ✅</div>
+        <div id="formErro" style="grid-column:1 / -1;margin-top:12px;font-size:14px;color:#991b1b;display:none;">Não foi possível enviar. Tente novamente.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <small style="color: var(--muted);">© 2025 yasmin velho. Todos os direitos reservados.</small>
+        <div style="margin-top: 8px;">
+          <a href="mailto:contato@yasminvelho.com" style="color: var(--gold); margin-right: 24px; font-size: 14px;">contato@yasminvelho.com</a>
+          <a href="https://www.instagram.com/yasminvlh" target="_blank" rel="noopener noreferrer" style="color: var(--gold); font-size: 14px;">@yasminvlh</a>
+        </div>
+      </div>
+      <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Voltar ao topo</button>
+    </div>
+  </footer>
+
+  <script>
+    // Animação de scroll suave para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Animação de entrada dos elementos
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Formulário agora usa Formspree - não precisa de JavaScript personalizado
+
+    // Pilares interativos
+    let activePilar = null;
+
+    function activatePilar(pilarNumber) {
+      const pilar = document.getElementById(`pilar-${pilarNumber}`);
+      const details = pilar.querySelector('.pilar-details');
+      const indicator = document.getElementById(`indicator-${pilarNumber}`);
+      
+      // Se o pilar já está ativo, desativa
+      if (activePilar === pilarNumber) {
+        deactivateAllPilars();
+        activePilar = null;
+        return;
+      }
+      
+      // Desativa todos os pilares primeiro
+      deactivateAllPilars();
+      
+      // Ativa o pilar selecionado
+      activePilar = pilarNumber;
+      
+      pilar.classList.add('active');
+      details.classList.add('active');
+      indicator.classList.add('active');
+    }
+
+    function deactivateAllPilars() {
+      for (let i = 1; i <= 3; i++) {
+        const pilar = document.getElementById(`pilar-${i}`);
+        const details = pilar.querySelector('.pilar-details');
+        const indicator = document.getElementById(`indicator-${i}`);
+        
+        pilar.classList.remove('active');
+        details.classList.remove('active');
+        indicator.classList.remove('active');
+      }
+    }
+
+    // Função para alternar som do vídeo
+    function toggleMute() {
+      const video = document.getElementById('heroVideo');
+      const button = document.getElementById('muteButton');
+      
+      if (video.muted) {
+        video.muted = false;
+        button.textContent = '🔊';
+      } else {
+        video.muted = true;
+        button.textContent = '🔇';
+      }
+    }
+
+    // Ponte 3D grande interativa
+    function activateBridge() {
+      const particles = document.getElementById('bridgeParticles');
+      const center = document.getElementById('bridgeCenter');
+      const bridgeLeft = document.getElementById('bridgeLeft');
+      const bridgeRight = document.getElementById('bridgeRight');
+      const leftCables = document.getElementById('leftCables');
+      const rightCables = document.getElementById('rightCables');
+      const centerLeftCables = document.getElementById('centerLeftCables');
+      const centerRightCables = document.getElementById('centerRightCables');
+      const crossCables = document.getElementById('crossCables');
+      const leftTower = document.getElementById('leftTower');
+      const rightTower = document.getElementById('rightTower');
+      const centerTower = document.getElementById('centerTower');
+      
+      if (particles) particles.style.opacity = '1';
+      if (center) {
+        center.style.transform = 'scale(1.2)';
+        center.style.boxShadow = '0 12px 35px rgba(212,175,55,0.8)';
+      }
+      if (bridgeLeft) {
+        bridgeLeft.style.strokeWidth = '12';
+        bridgeLeft.style.filter = 'drop-shadow(0 0 8px var(--gold-2))';
+      }
+      if (bridgeRight) {
+        bridgeRight.style.strokeWidth = '12';
+        bridgeRight.style.filter = 'drop-shadow(0 0 8px var(--gold-2))';
+      }
+      if (leftCables) {
+        leftCables.style.opacity = '1';
+        leftCables.style.filter = 'drop-shadow(0 0 4px var(--gold))';
+      }
+      if (rightCables) {
+        rightCables.style.opacity = '1';
+        rightCables.style.filter = 'drop-shadow(0 0 4px var(--gold))';
+      }
+      if (centerLeftCables) {
+        centerLeftCables.style.opacity = '1';
+        centerLeftCables.style.filter = 'drop-shadow(0 0 4px var(--gold))';
+      }
+      if (centerRightCables) {
+        centerRightCables.style.opacity = '1';
+        centerRightCables.style.filter = 'drop-shadow(0 0 4px var(--gold))';
+      }
+      if (crossCables) {
+        crossCables.style.opacity = '0.8';
+        crossCables.style.filter = 'drop-shadow(0 0 6px var(--gold-2))';
+      }
+      if (leftTower) leftTower.style.filter = 'drop-shadow(0 0 6px var(--gold))';
+      if (rightTower) rightTower.style.filter = 'drop-shadow(0 0 6px var(--gold))';
+      if (centerTower) centerTower.style.filter = 'drop-shadow(0 0 8px var(--gold-2))';
+    }
+    
+    function deactivateBridge() {
+      const particles = document.getElementById('bridgeParticles');
+      const center = document.getElementById('bridgeCenter');
+      const bridgeLeft = document.getElementById('bridgeLeft');
+      const bridgeRight = document.getElementById('bridgeRight');
+      const leftCables = document.getElementById('leftCables');
+      const rightCables = document.getElementById('rightCables');
+      const centerLeftCables = document.getElementById('centerLeftCables');
+      const centerRightCables = document.getElementById('centerRightCables');
+      const crossCables = document.getElementById('crossCables');
+      const leftTower = document.getElementById('leftTower');
+      const rightTower = document.getElementById('rightTower');
+      const centerTower = document.getElementById('centerTower');
+      
+      if (particles) particles.style.opacity = '0';
+      if (center) {
+        center.style.transform = 'scale(1)';
+        center.style.boxShadow = '0 8px 25px rgba(212,175,55,0.5)';
+      }
+      if (bridgeLeft) {
+        bridgeLeft.style.strokeWidth = '8';
+        bridgeLeft.style.filter = 'none';
+      }
+      if (bridgeRight) {
+        bridgeRight.style.strokeWidth = '8';
+        bridgeRight.style.filter = 'none';
+      }
+      if (leftCables) {
+        leftCables.style.opacity = '0.8';
+        leftCables.style.filter = 'none';
+      }
+      if (rightCables) {
+        rightCables.style.opacity = '0.8';
+        rightCables.style.filter = 'none';
+      }
+      if (centerLeftCables) {
+        centerLeftCables.style.opacity = '0.6';
+        centerLeftCables.style.filter = 'none';
+      }
+      if (centerRightCables) {
+        centerRightCables.style.opacity = '0.6';
+        centerRightCables.style.filter = 'none';
+      }
+      if (crossCables) {
+        crossCables.style.opacity = '0.4';
+        crossCables.style.filter = 'none';
+      }
+      if (leftTower) leftTower.style.filter = 'none';
+      if (rightTower) rightTower.style.filter = 'none';
+      if (centerTower) centerTower.style.filter = 'none';
+    }
+
+    // Animação do texto de progresso
+    const progressTexts = [
+      "Iniciando jornada de transformação...",
+      "Identificando necessidades do cliente...",
+      "Aplicando estratégia UGC personalizada...",
+      "Criando conexão emocional profunda...",
+      "Posicionando marca como única opção...",
+      "Dominância de mercado alcançada! 👑"
+    ];
+    
+    let currentTextIndex = 0;
+    const progressTextElement = document.getElementById('progressText');
+    
+    function updateProgressText() {
+      if (progressTextElement) {
+        progressTextElement.style.opacity = '0';
+        setTimeout(() => {
+          progressTextElement.textContent = progressTexts[currentTextIndex];
+          progressTextElement.style.opacity = '1';
+          currentTextIndex = (currentTextIndex + 1) % progressTexts.length;
+        }, 300);
+      }
+    }
+    
+    // Atualizar texto a cada 2 segundos
+    setInterval(updateProgressText, 2000);
+    
+    // Iniciar com o primeiro texto
+    setTimeout(updateProgressText, 1000);
+
+    // Filosofia interativa
+    function activatePhilosophy(number) {
+      const card = document.getElementById(`philosophy-${number}`);
+      const icon = card.querySelector('.philosophy-icon > div');
+      const energyRings = card.querySelectorAll('.energy-ring');
+      const details = card.querySelector('.philosophy-details');
+      const title = card.querySelector('h3');
+      
+      // Ativar efeitos visuais
+      card.style.background = 'rgba(139,21,56,0.05)';
+      card.style.borderColor = 'var(--gold-2)';
+      card.style.transform = 'translateY(-8px) scale(1.02)';
+      card.style.boxShadow = '0 20px 40px rgba(139,21,56,0.3)';
+      
+      // Ícone
+      icon.style.transform = 'scale(1.2)';
+      icon.style.filter = 'drop-shadow(0 0 12px var(--gold-2))';
+      
+      // Anéis de energia
+      energyRings.forEach(ring => {
+        ring.style.opacity = '0.6';
+      });
+      
+      // Expandir detalhes
+      details.style.maxHeight = '200px';
+      details.style.opacity = '1';
+      details.style.marginTop = '24px';
+      
+      // Título brilhante
+      title.style.textShadow = '0 0 20px var(--gold-2)';
+      title.style.color = 'var(--gold)';
+    }
+    
+    function deactivatePhilosophy(number) {
+      const card = document.getElementById(`philosophy-${number}`);
+      const icon = card.querySelector('.philosophy-icon > div');
+      const energyRings = card.querySelectorAll('.energy-ring');
+      const details = card.querySelector('.philosophy-details');
+      const title = card.querySelector('h3');
+      
+      // Desativar efeitos visuais
+      card.style.background = '#3a3a3a';
+      card.style.borderColor = 'var(--gold)';
+      card.style.transform = 'translateY(0) scale(1)';
+      card.style.boxShadow = '0 4px 20px rgba(139,21,56,0.1)';
+      
+      // Ícone
+      icon.style.transform = 'scale(1)';
+      icon.style.filter = 'none';
+      
+      // Anéis de energia
+      energyRings.forEach(ring => {
+        ring.style.opacity = '0';
+      });
+      
+      // Recolher detalhes
+      details.style.maxHeight = '0';
+      details.style.opacity = '0';
+      details.style.marginTop = '0';
+      
+      // Título normal
+      title.style.textShadow = 'none';
+      title.style.color = '#ffffff';
+    }
+
+    // Botões de serviços
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (e.target.textContent === 'Escolher Plano' || e.target.textContent === 'Começar Projeto' || e.target.textContent === 'Vamos Conversar') {
+          document.querySelector('#contato').scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Funções para mostrar/esconder observações
+    function showObservacoes(card) {
+      const observacoes = card.querySelector('.observacoes-hover');
+      if (observacoes) {
+        observacoes.style.maxHeight = '300px';
+        observacoes.style.opacity = '1';
+      }
+    }
+    
+    function hideObservacoes(card) {
+      const observacoes = card.querySelector('.observacoes-hover');
+      if (observacoes) {
+        observacoes.style.maxHeight = '0';
+        observacoes.style.opacity = '0';
+      }
+    }
+
+    // Funções interativas das skills
+    function activateSkill(card, type) {
+      const glow = card.querySelector('.skill-glow');
+      const icon = card.querySelector('.skill-icon');
+      const title = card.querySelector('h5');
+      const description = card.querySelector('p');
+      
+      // Efeitos visuais baseados no tipo
+      if (type === 'soft') {
+        // Soft skills - tons dourados
+        card.style.borderColor = 'var(--gold)';
+        card.style.transform = 'translateY(-4px) scale(1.02)';
+        card.style.boxShadow = '0 12px 30px rgba(184,134,11,0.5)';
+        card.style.background = '#2a2a2a';
+        glow.style.opacity = '1';
+        
+        icon.style.background = 'linear-gradient(135deg, var(--gold), var(--gold-2))';
+        icon.style.borderColor = 'var(--gold)';
+        icon.style.transform = 'scale(1.1)';
+        icon.style.boxShadow = '0 0 20px rgba(184,134,11,0.6)';
+        
+        title.style.color = 'var(--gold)';
+        title.style.textShadow = '0 0 8px rgba(184,134,11,0.4)';
+        
+      } else if (type === 'hard') {
+        // Hard skills - tons bronze/cobre
+        card.style.borderColor = 'var(--gold-2)';
+        card.style.transform = 'translateY(-4px) scale(1.02)';
+        card.style.boxShadow = '0 12px 30px rgba(205,133,63,0.5)';
+        card.style.background = '#2a2a2a';
+        glow.style.opacity = '1';
+        
+        icon.style.background = 'linear-gradient(135deg, var(--gold-2), var(--gold))';
+        icon.style.borderColor = 'var(--gold-2)';
+        icon.style.transform = 'scale(1.1)';
+        icon.style.boxShadow = '0 0 20px rgba(205,133,63,0.6)';
+        
+        title.style.color = 'var(--gold-2)';
+        title.style.textShadow = '0 0 8px rgba(205,133,63,0.4)';
+      }
+      
+      description.style.color = '#ffffff';
+    }
+    
+    function deactivateSkill(card) {
+      const glow = card.querySelector('.skill-glow');
+      const icon = card.querySelector('.skill-icon');
+      const title = card.querySelector('h5');
+      const description = card.querySelector('p');
+      
+      // Resetar todos os efeitos
+      card.style.borderColor = 'var(--gold)';
+      card.style.transform = 'translateY(0) scale(1)';
+      card.style.boxShadow = 'none';
+      card.style.background = '#1a1a1a';
+      glow.style.opacity = '0';
+      
+      icon.style.background = 'linear-gradient(135deg, rgba(184,134,11,0.2), rgba(255,215,0,0.1))';
+      icon.style.borderColor = 'rgba(184,134,11,0.3)';
+      icon.style.transform = 'scale(1)';
+      icon.style.boxShadow = 'none';
+      
+      title.style.color = '#ffffff';
+      title.style.textShadow = 'none';
+      
+      description.style.color = '#cccccc';
+    }
+
+    /* ===== Envio Formspree com feedback inline ===== */
+    (function () {
+      const form = document.getElementById('contatoForm');
+      if (!form) return;
+
+      const btn  = document.getElementById('btnEnviar');
+      const ok   = document.getElementById('formOk');
+      const err  = document.getElementById('formErro');
+
+      function show(el){ el.style.display='block'; }
+      function hide(el){ el.style.display='none'; }
+      function resetMsgs(){ hide(ok); hide(err); }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        resetMsgs();
+
+        const original = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+
+        try {
+          const data = new FormData(form);
+          if (data.get('_gotcha')) { btn.disabled = false; btn.textContent = original; return; }
+
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (resp.ok) {
+            show(ok);
+            form.reset();
+          } else {
+            let message = 'Não foi possível enviar. Tente novamente.';
+            try {
+              const j = await resp.json();
+              if (j?.errors?.length) message = j.errors.map(e => e.message).join(' ');
+            } catch(_) {}
+            document.getElementById('formErro').textContent = message;
+            show(err);
+          }
+        } catch (_) {
+          show(err);
+        } finally {
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      });
+    })();
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'988850f393fff18b',t:'MTc1OTQ1MTI3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
